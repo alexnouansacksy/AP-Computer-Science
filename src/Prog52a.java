@@ -6,7 +6,7 @@ public class Prog52a {
 
         // + - * / %
         int area = length * width;
-        int perim= 2  * length + 2 * width;
+        int perim = 2  * length + 2 * width;
 
         System.out.println("Area = " + area);
         System.out.println("Perim = " + perim);
