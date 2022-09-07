@@ -10,5 +10,8 @@ public class Prog52a {
 
         System.out.println("Area = " + area);
         System.out.println("Perim = " + perim);
+
+        //area = 11726
+        //perim = 450
     }
 }
