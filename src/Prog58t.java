@@ -25,12 +25,7 @@ public class Prog58t {
     double nickels = (int) (changeDue / 0.05);
     changeDue -= (nickels * 0.05);
     double pennies = (int) (changeDue * 100);
-    
-
-    
-  
-
-      
+   
     System.out.printf("\nChange due: $%.2f", totalChange );
     System.out.print("\n\nDollars: " + dollars);
     System.out.print("\nQuarters: " + quarters);
@@ -39,7 +34,8 @@ public class Prog58t {
     System.out.print("\nPennies: " + pennies);
     
 /*
-    Change due: $14.68
+
+Change due: $14.68
 
 Dollars: 14.0
 Quarters: 2.0
