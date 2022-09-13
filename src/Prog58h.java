@@ -16,11 +16,11 @@ public class Prog58h {
         System.out.print("Number of days at interest: ");
         double t = keyboard.nextDouble();
 
-        double amount = p * (1 + (Math.pow(((.01 * r )/ n), (n * t)/365)));
+        double amount = p * (1 + (Math.pow(((n * t)/365), ((.01 * r )/ n))));
 
         double interest = amount - p;
-        System.out.println("The interest earned is: " + interest);
-        System.out.println("The total amount in savings is now: " + amount);
+        System.out.printf("The interest earned is $%.2f", interest);
+        System.out.printf("\n The total amount in savings is now $%.2f", amount);
     }
 }
     
