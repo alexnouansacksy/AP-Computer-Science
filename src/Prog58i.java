@@ -24,3 +24,12 @@ public class Prog58i {
 
     }
 }
+/*
+The loan rate is
+14.5
+The number of months it will take me to pay off the loan is
+36
+My monthly payment will be $93.10
+The total interest paid is $3351.66
+The total amount paid is $10851.66
+ */
