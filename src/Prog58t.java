@@ -1,6 +1,9 @@
 import java.util.*;
+// Alex Nouansacksy
+// 9/13/22
+// Prog58t
 
-class Main {
+public class Prog58t {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
 
@@ -35,6 +38,15 @@ class Main {
     System.out.print("\nNickels: " + nickels);
     System.out.print("\nPennies: " + pennies);
     
-    
+/*
+    Change due: $14.68
+
+Dollars: 14.0
+Quarters: 2.0
+Dimes: 1.0
+Nickels: 1.0
+Pennies: 3.0
+
+*/
   }
 }
