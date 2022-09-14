@@ -24,12 +24,12 @@ public class Prog58h {
        // double power = (n * t)/365;
         // double amount = p * (1 + (Math.pow(term1, power)));
   
-         double amount2 = p * Math.pow((1 + ((.01 * r) / n)), ((n * t) / 365));
+         double amount = p * Math.pow((1 + ((.01 * r) / n)), ((n * t) / 365));
 
-        double interest = amount2 - p;
+        double interest = amount - p;
   
         System.out.printf("The interest earned is $%.2f", interest);
-        System.out.printf("\nThe total amount in savings is now $%.2f", amount2);
+        System.out.printf("\nThe total amount in savings is now $%.2f", amount);
     }
   
 } 
