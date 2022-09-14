@@ -24,3 +24,7 @@ public class Prog65h {
 
     }
 }
+/*Enter pounds: 7
+  Enter shillings: 17
+  Enter pence: 9
+  Demical pounds =7.8875 pounds*/
