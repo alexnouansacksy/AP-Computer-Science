@@ -29,12 +29,12 @@ public class Prog58h {
         double interest = amount2 - p;
   
         System.out.printf("The interest earned is $%.2f", interest);
-        System.out.printf("\n The total amount in savings is now $%.2f", amount2);
+        System.out.printf("\nThe total amount in savings is now $%.2f", amount2);
     }
   
 } 
 /*
-Amount Saved:5000
+Amount Saved: 5000
 Interest Rate: 11.5
 Number of times compounded per year: 365
 Number of days at interest: 900
