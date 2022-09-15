@@ -36,4 +36,5 @@ public class Prog72t {
 Enter the first time: 900
 Enter the second time: 1730
 8 hours 30.0 minutes
+
  */
