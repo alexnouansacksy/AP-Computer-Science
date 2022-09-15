@@ -1,7 +1,6 @@
 // Alex Nouansacksy
 // 09/15/2022
 // Prog76a
-
 import java.util.*;
 public class Prog76a {
     public static void  main(String[] args) {
