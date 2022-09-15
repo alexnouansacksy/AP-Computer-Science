@@ -1,6 +1,10 @@
 // Alex Nouansacksy
 // 09/15/22
 // Prog72t
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 import java.util.*;
 
 
@@ -28,7 +32,11 @@ public class Prog72t {
         hours = (int) time / 60;
         minutes = time % 60;
         System.out.print(hours + " hours " + minutes + " minutes");
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/master
     }
 }
 /*
@@ -36,4 +44,8 @@ Enter the first time: 900
 Enter the second time: 1730
 8 hours 30.0 minutes
 
+<<<<<<< HEAD
  */
+=======
+ */
+>>>>>>> origin/master
