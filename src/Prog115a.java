@@ -1,7 +1,6 @@
 // Alex Nouansacksy
 // 9/19/22
 // Prog115a
-
 public class Prog115a {
     public static void main(String[] args) {
         int lcv = 0; // loop control variable
