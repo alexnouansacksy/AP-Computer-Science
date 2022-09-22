@@ -1,6 +1,7 @@
 // Alex Nouansacksy
 // 09/22/22
 // Prog122h
+
 public class Prog122h {
     public static void main(String[] args) {
         int lcv = 0;
