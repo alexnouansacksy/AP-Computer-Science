@@ -1,4 +1,4 @@
-// Alex Nouansacksy
+    // Alex Nouansacksy
 // 09-23-22
 // String Interview Question 1
 
@@ -9,7 +9,7 @@
         System.out.print("Duplicate characters: ");
 
         for (int lcv = 0; lcv < str.length(); lcv++) {
-            for (int lcv2 = lcv++; lcv2 < str.length(); lcv2++) {
+            for (int lcv2 = lcv + 1; lcv2 < str.length(); lcv2++) {
                 char letter1 = str.charAt(lcv);
                 char letter2 = str.charAt(lcv2);
 
@@ -23,3 +23,7 @@
         }
     }
 }
+/*
+The string is beautiful beach
+Duplicate characters: b e a u
+ */
