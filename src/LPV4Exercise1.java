@@ -14,7 +14,7 @@ public class LPV4Exercise1 {
         else if (copies <= 749) pricePerCopies = 0.27;
         else if (copies <= 1000) pricePerCopies = 0.26;
         else pricePerCopies = 0.25;
-        double total = copies * pricePerCopies;
+            double total = copies * pricePerCopies;
         System.out.println("Total cost is: $" + total);
 
 
