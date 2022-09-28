@@ -8,6 +8,7 @@ public class StrInterview7 {
 
         System.out.print("Enter a string: ");
         String mytext = keyboard.nextLine();
+        mytext = mytext.toLowerCase();
 
         int vowelcount = 0;
         for (int lcv = 0; lcv < mytext.length(); lcv++) {
