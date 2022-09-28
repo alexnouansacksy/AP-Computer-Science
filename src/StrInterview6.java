@@ -103,5 +103,6 @@ public class StrInterview6 {
     }
 }
 /*
-
+Enter a string: Java
+3
 */
