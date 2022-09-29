@@ -1,9 +1,9 @@
-// Alex Nouansacksy
-// 09/26/22
-// LPV 4-1
 import java.util.*;
 
-public class LPV4Exercise1 {
+// Alex Nouansacksy
+// 09/26/22
+// LP 4-1
+public class LP4Exercise1 {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter how many copies: ");
@@ -14,13 +14,11 @@ public class LPV4Exercise1 {
         else if (copies <= 749) pricePerCopies = 0.27;
         else if (copies <= 1000) pricePerCopies = 0.26;
         else pricePerCopies = 0.25;
-            double total = copies * pricePerCopies;
+        double total = copies * pricePerCopies;
         System.out.println("Total cost is: $" + total);
-
-
     }
 }
 /*
 Enter how many copies: 1001
 Total cost is: $250.25
-*/
+ */
