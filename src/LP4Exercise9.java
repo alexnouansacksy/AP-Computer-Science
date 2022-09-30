@@ -2,7 +2,7 @@
 // 9/29/22
 // LP 4-9
 import java.util.*;
-public class test {
+public class LP4Exercise9 {
     public static void main(String[] args ) {
         Scanner keyboard = new Scanner(System.in);
         int secretNumber = (int) (Math.random() * (20 -1) + 1);
