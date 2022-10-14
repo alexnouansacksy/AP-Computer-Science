@@ -20,10 +20,11 @@ public class Prog213e {
             Scanner keyboard = new Scanner(new File("data/prog213e.dat"));
             while (keyboard.hasNext()) {
                 double num = keyboard.nextDouble();
-                if (num > 79 ) above80Distribution++;
-                else if (num > 59) lessThan80Distribution++;
-                else if (num > 39) lessThan60Distribution++;
-                else if (num > 20) lessThan40Distribution++;
+                //if (num > 79 ) above80Distribution++;
+                if (num > 20 && num < 40) lessThan40Distribution++;
+                else if (num > 39 && num < 60) lessThan60Distribution++;
+                else if (num > 59 && num < 80) lessThan80Distribution++;
+                else if (num > 79 ) above80Distribution++;
                 else lessThan20Distribution++;
                 total++;
             }
@@ -35,14 +36,25 @@ public class Prog213e {
 
             System.out.println("Langner Family");
             System.out.println("Age\tGroup\tDistribution\tPercentage");
-            System.out.printf("<20\t%f\t%.2f\n", lessThan20Distribution, lessThan20);
-            System.out.printf("20-39\t%f\t%.2f\n", lessThan40Distribution, lessThan40);
-            System.out.printf("40-59\t%f\t%.2f\n", lessThan60Distribution, lessThan60);
-            System.out.printf("60-79\t%f\t%.2f\n", lessThan80Distribution, lessThan80);
-            System.out.printf("79\t%f\t%.2f\n ", above80Distribution, above80);
+            System.out.printf("<20\t\t\t%f\t\t%.2f\n", lessThan20Distribution, lessThan20);
+            System.out.printf("20-39\t\t%f\t\t%.2f\n", lessThan40Distribution, lessThan40);
+            System.out.printf("40-59\t\t%f\t\t%.2f\n", lessThan60Distribution, lessThan60);
+            System.out.printf("60-79\t\t%f\t\t%.2f\n", lessThan80Distribution, lessThan80);
+            System.out.printf("79\t\t\t%f\t\t%.2f\n ", above80Distribution, above80);
 
         } catch(IOException e) {
             System.out.println("Can't find data file!");
         }
     }
 }
+/*
+Langner Family
+Age	Group	Distribution	Percentage
+<20			6.000000		0.26
+20-39		4.000000		0.17
+40-59		8.000000		0.35
+60-79		3.000000		0.13
+79			2.000000		0.09
+
+Process finished with exit code 0
+ */
