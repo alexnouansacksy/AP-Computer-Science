@@ -18,11 +18,12 @@ public class Prog52aClass {
         Cl52a wow = new Cl52a(length, width);
         wow.setStuff();
 
-        int area = wow.getArea();
-        int perimeter = wow.getPerim();
+        // int area = wow.getArea();
+        // int perimeter = wow.getPerim();
 
-        printer.println("Area: " + area);
-        out.println("Perimeter: " + perimeter);
+        //printer.println("Area: " + area);
+        //out.println("Perimeter: " + perimeter);
+        wow.print();
     }
 }
 /*
