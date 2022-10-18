@@ -8,6 +8,7 @@ public class Cl52a {
     private int myArea;
     private int myPerim;
 
+
     // Constructor: set up private data
 
     /**
