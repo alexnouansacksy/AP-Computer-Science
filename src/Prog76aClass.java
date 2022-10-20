@@ -24,3 +24,15 @@ public class Prog76aClass {
         out.print(product2 + "  Surprise!");
     }
 }
+/*
+Enter a number you dislike: 5
+5
+x 9
+---------
+45
+x 12345679
+---------
+555555555  Surprise!
+Process finished with exit code 0
+
+ */
