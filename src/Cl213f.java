@@ -23,4 +23,6 @@ public class Cl213f {
         }
     }
     public double getmyCost() {return myCost;}
+
+    public String toString() {return "The cost of " + myHours + " hours is $" +  String.format("%.2f", myCost);}
 }
