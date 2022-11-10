@@ -30,7 +30,7 @@ public class Cl214b {
         else if (myBasePay > 100 && myBasePay < 150) taxrate = 0.08;
         else if (myBasePay > 150 && myBasePay < 200) taxrate = 0.12;
         else if (myBasePay > 200 && myBasePay < 300) taxrate = 0.15;
-        else if (myBasePay >= 300) taxrate = 17;
+        else if (myBasePay >= 300) taxrate = 0.175;
         myWithholding = myBasePay * taxrate;
 
         myFica = 0;
@@ -42,7 +42,7 @@ public class Cl214b {
         myNetPay = (myBasePay - myWithholding) - myFica;
     }
 
-    public String toString() { return "Employee Number: " + myId + "\tHours: " + myHours + "\tShift Factor: " + myShiftCode
-            + "\tGross Pay: " + myBasePay + "\tYear-to date: " + myYtd + "\nWithholding: " + myWithholding + "\tFICA: "
-    + myFica + "\tNet Pay: " + myNetPay;}
+    public String toString() { return "\nEmployee Number: " + myId + "\tHours: " + myHours + "\tShift Factor: " + myShiftCode
+            + "\tGross Pay: " + String.format("%.2f", myBasePay) + "\tYear-to date: " + myYtd + "\nWithholding: " + String.format("%.2f", myWithholding)
+            + "\tFICA: " + String.format("%.2f", myFica) + "\tNet Pay: " + String.format("%.2f", myNetPay);}
 }
