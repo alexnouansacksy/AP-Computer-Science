@@ -18,7 +18,16 @@ public class Prog435g {
                 count++;
             }
 
-            // Sort the scores
+            // Sort the scores via BUBBLE SORT
+            for (int lcv = 0; lcv < count; lcv++) {
+                for (int lcv2 = 0; lcv2 < count - 1; lcv2++) {
+                    if(scores[lcv2] > scores[lcv2 + 1]) {
+                        int temp = scores[lcv2];
+                        scores[lcv2] = scores[lcv2 + 1];
+                        scores[lcv2 + 1] = temp;
+                    }
+                }
+            }
 
             Cl435g[] golfers = new Cl435g[count];
             for (int lcv = 0; lcv < count; lcv++) {
@@ -39,3 +48,40 @@ public class Prog435g {
         }
     }
 }
+/*
+Score	Rank
+66		1
+68		2
+68		2
+69		3
+70		4
+70		4
+70		4
+70		4
+71		5
+72		6
+72		6
+72		6
+73		7
+74		8
+75		9
+75		9
+75		9
+76		10
+76		10
+77		11
+77		11
+78		12
+80		13
+81		14
+82		15
+86		16
+87		17
+88		18
+88		18
+88		18
+90		19
+
+Process finished with exit code 0
+
+ */
