@@ -9,7 +9,7 @@ import static java.lang.System.out;
 public class Prog402a {
     public static void main(String[] args) {
         try {
-            Scanner keyboard = new Scanner(new File("data/prog285b.dat"));
+            Scanner keyboard = new Scanner(new File("data/prg402a.dat"));
 
         } catch (IOException e) {
             out.println("Can't find data file!");
