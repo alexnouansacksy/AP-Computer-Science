@@ -10,34 +10,35 @@ public class Prog402a {
     public static void main(String[] args) {
         try {
             Scanner keyboard = new Scanner(new File("data/prg402a.dat"));
-            int[] list = new int[1000];
+            Cl402a[] list = new Cl402a[1000];
             int cnt = 0;
             int cnt2 = 0;
             double total = 0;
             double average = 0;
-            while (keyboard.hasNext()) {
-                list[cnt] = keyboard.nextInt();
-                cnt += 1;
-            }
 
-            for (int lcv = 1; lcv < cnt; lcv+= 2) {
-                total += list[lcv];
-                cnt2 += 1;
+            while (keyboard.hasNext()) {
+                int ID = keyboard.nextInt();
+                int score = keyboard.nextInt();
+                total += score;
+                Cl402a wow = new Cl402a(ID, score);
+                list[cnt] = wow;
+                cnt += 2;
+                cnt2 ++;
             }
 
             average = total / cnt2;
-            int lcv2 = 0;
+
+            for (int lcv = 0; lcv < cnt; lcv+= 2) {
+                list[lcv].calc(average);
+            }
 
             out.println("ID\t\tScore\tDifference");
-            while (lcv2 < cnt) {
-                int ID = list[lcv2];
-                int score = list[lcv2 + 1];
-                double difference = score - average;
 
-                out.printf("%d\t\t%d\t\t%.2f\n", ID, score, difference);
-                lcv2 += 2;
-            }
+            for (int lcv = 0; lcv < cnt; lcv += 2)
+                out.println(list[lcv].toString());
+
             out.printf("\nAverage Score: %.2f", average);
+
         } catch (IOException e) {
             out.println("Can't find data file!");
         }

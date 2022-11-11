@@ -4,29 +4,19 @@
 public class Cl402a {
     private int myID;
     private int myScore;
-    private int myTotal = 0;
     private double myDifference;
-    private double myAverage;
     private int myCount;
     public Cl402a(int ID, int score) {
         myID = ID;
         myScore = score;
-        myTotal += score;
-        myCount++;
+        myDifference = 0;
     }
-    public void calc() {
-        myAverage = myTotal / (double) myCount;
-        myDifference = myScore - myAverage;
+    public void calc(double average) {
+        myDifference = myScore - average;
     }
+    public String toString() {return myID + String.format("\t\t%d\t\t%.2f", myScore, myDifference);}
 
-    public double getMyAverage() {
-        return myAverage;
-    }
 
-    public double getMyDifference() {
-        return myDifference;
-    }
 }
 
-   //public String toString() {return "ID: "+ myID + String.format("\t", myScore, "\t.2f\n", myDifference);}
 
