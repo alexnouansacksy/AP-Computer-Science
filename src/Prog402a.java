@@ -33,10 +33,8 @@ public class Prog402a {
             }
 
             out.println("ID\t\tScore\tDifference");
-
             for (int lcv = 0; lcv < cnt; lcv += 2)
                 out.println(list[lcv].toString());
-
             out.printf("\nAverage Score: %.2f", average);
 
         } catch (IOException e) {
