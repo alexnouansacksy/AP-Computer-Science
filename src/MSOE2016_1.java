@@ -1,6 +1,6 @@
 import java.util.*;
 import static java.lang.System.out;
-public class MSOE2016_1 {
+public class Main {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         out.print("Enter a lowercase word: ");
@@ -30,11 +30,15 @@ public class MSOE2016_1 {
         }
       
         if (original.equals(thePalindrome)) out.print("That word is a palindrome");
-        else out.print("That word is not a plaindrome");
-       
-      
-        
+        else out.print("That word is not a palindrone");
+          
     }
-
-
 }
+
+/*
+Enter a lower case word: alex
+That word is not a palindrone
+
+Enter a lower case word: deed
+That word is a palindrone
+*/
