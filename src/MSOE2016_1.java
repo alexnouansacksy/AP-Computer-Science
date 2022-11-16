@@ -1,3 +1,6 @@
+// Alex Nouansacksy
+// MSOE2016_1
+// 11/15/2022
 import java.util.*;
 import static java.lang.System.out;
 public class MSOE2016_1 {
