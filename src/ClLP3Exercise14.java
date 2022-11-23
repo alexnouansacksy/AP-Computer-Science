@@ -40,7 +40,7 @@ public class ClLP3Exercise14 {
     
   }
 
-  public String toString() {return String.format("Candidates\t\tVotes\tPercentage\nAwbrey\t\t%d\t%.2f%\nMartinez\t\t%d\t%.2f%\nTOTAL VOTES:\t", myAwbreyTotal, myAwbreyPercentage, myMartinezTotal, myMartinezPercentage, myTotal);}
+  public String toString() {return String.format("Candidates\t\tVotes\tPercentage\nAwbrey\t\t\t%d\t%.2f\nMartinez\t\t%d\t%.2f\nTOTAL VOTES:\t%.2f", myAwbreyTotal, myAwbreyPercentage, myMartinezTotal, myMartinezPercentage, myTotal);}
 
   public void print() {
         System.out.println(this.toString());
