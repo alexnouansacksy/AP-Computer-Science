@@ -1,5 +1,5 @@
 // Alex Nouansacksy
-// LP3Exercise10Class
+// LP3Exercise10Cl
 // 11/22/2022
 public class ClLP3Exercise10 {
     int myBurgers;
