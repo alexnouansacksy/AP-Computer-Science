@@ -47,22 +47,3 @@ public class ClLP3Exercise10 {
     }
 }
 
-/*
-PART A
-Enter the number of burgers: 2
-ENter the number of fries: 5
-Enter the number of sodas: 5
-Total before tax: $13.78
-Tax: $0.90
-Total: $14.68
-
-PART B
-Enter the number of burgers: 2
-ENter the number of fries: 5
-Enter the number of sodas: 5
-Total before tax: $13.78
-Cash Tendered: $20
-Tax: $0.90
-Total: $14.68
-Change: $5.32
-*/
