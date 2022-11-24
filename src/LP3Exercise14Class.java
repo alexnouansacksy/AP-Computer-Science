@@ -3,7 +3,7 @@
 // 11/23/2022
 import java.util.*;
 import static java.lang.System.out;
-class Main {
+class LP3Exercise14Class {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
     out.println("Election Results of New York: ");
