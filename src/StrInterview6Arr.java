@@ -27,3 +27,9 @@ public class StrInterview6Arr {
 
     }
 }
+/*
+Enter a string: alex
+Unique letters: 4
+
+Process finished with exit code 0
+ */
