@@ -30,6 +30,7 @@ public class Prog410t {
                 cnt2++;
             }
 
+
             for (int i = 0; i < ids.length; i++ ) {
                 if (ids[i] != 0) out.println(ids[i] + "\t" + incomes[i] + "\t" + members[i]);
             }
@@ -40,8 +41,8 @@ public class Prog410t {
             for (int i = 0; i < incomes.length; i++) {
                 totalIncome += incomes[i];
             }
-            averageIncome = totalIncome / familiescnt;
-            out.println("the average income is " + averageIncome);
+            averageIncome = totalIncome / (double) familiescnt;
+            out.printf("the average income is %.1f\n", averageIncome);
 
             int[] indexesofincomesbelowaverage = new int[15];
 
@@ -59,6 +60,16 @@ public class Prog410t {
                      + "\t" + members[indexesofincomesbelowaverage[i]]);
                 }
             }
+
+            double familiesInPoverty = 0;
+
+            for (int lcv = 0; lcv <familiescnt; lcv++) {
+                if (incomes[lcv] < (3750 + (750 * (members[lcv] - 2)))) familiesInPoverty++;
+            }
+            double percentInPoverty;
+            percentInPoverty = familiesInPoverty / familiescnt;
+            out.printf("Percent of households below the poverty level: %.7f\n", percentInPoverty);
+
 
         } catch (IOException e) {
             out.println("Can't find data file!");
