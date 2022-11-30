@@ -65,11 +65,13 @@ public class Prog410t {
             double familiesInPoverty = 0;
 
             for (int lcv = 0; lcv <familiescnt; lcv++) {
-                if (incomes[lcv] < (3750 + (750 * (members[lcv] - 2)))) familiesInPoverty++;
             }
-            double percentInPoverty;
-            percentInPoverty = familiesInPoverty / familiescnt;
-            out.printf("Percent of households below the poverty level: %.7f\n", percentInPoverty);
+
+            for (int lcv = 0; lcv < incomes.length; lcv ++) {
+                Cl410t wow = new Cl410t(incomes[lcv], familiescnt, members[lcv]);
+                wow.getPovertyPercentage();
+            }
+
 
 
         } catch (IOException e) {
