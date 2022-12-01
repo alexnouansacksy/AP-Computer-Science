@@ -31,7 +31,7 @@ public class Prog410t {
                 cnt2++;
             }
 
-
+            out.println("id\t\tincome\tmembers");
             for (int i = 0; i < ids.length; i++ ) {
                 if (ids[i] != 0) out.println(ids[i] + "\t" + incomes[i] + "\t" + members[i]);
             }
@@ -43,7 +43,8 @@ public class Prog410t {
                 totalIncome += incomes[i];
             }
             averageIncome = totalIncome / (double) familiescnt;
-            out.printf("the average income is %.1f\n", averageIncome);
+            out.printf("\nHouses with an income above an average income of $%.1f\n", averageIncome);
+            out.println("id\t\tincome\tmembers");
 
             int[] indexesofincomesbelowaverage = new int[15];
 
@@ -61,21 +62,51 @@ public class Prog410t {
                      + "\t" + members[indexesofincomesbelowaverage[i]]);
                 }
             }
-
             double familiesInPoverty = 0;
 
             for (int lcv = 0; lcv <familiescnt; lcv++) {
             }
 
+            double povertyPercentage = 0;
+
             for (int lcv = 0; lcv < incomes.length; lcv ++) {
                 Cl410t wow = new Cl410t(incomes[lcv], familiescnt, members[lcv]);
                 wow.getPovertyPercentage();
+                povertyPercentage = wow.getThePovertyPercentage();
             }
-
-
+            out.printf("\nPercent of households below the poverty level: %.7f", povertyPercentage);
 
         } catch (IOException e) {
             out.println("Can't find data file!");
         }
     }
 }
+/*
+id		income	members
+1041	12180	4
+1062	13240	3
+1327	19800	2
+1483	22458	8
+1900	17000	2
+2112	18125	7
+2345	15623	2
+3210	3200	6
+3600	6500	5
+3601	11970	2
+4725	8900	3
+6217	10000	2
+9280	6200	1
+
+Houses with an income above an average income of $12707.4
+id		income	members
+1062	 13240	3
+1327	 19800	2
+1483	 22458	8
+1900	 17000	2
+2112	 18125	7
+2345	 15623	2
+
+Percent of households below the poverty level: 0.0769231
+Process finished with exit code 0
+
+ */
