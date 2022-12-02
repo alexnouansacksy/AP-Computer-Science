@@ -61,9 +61,9 @@ COMPSCI PETROLEUM COMPANY
 Regular				21.4 gallons @ 1.359
 ----------------------------------------
 Gasoline							29.08
-Wash Y								2.00
+Wash Y								0.00
 									------
-Total Due							31.08
+Total Due							29.08
 ----------------------------------------
 
 COMPSCI PETROLEUM COMPANY
@@ -81,9 +81,9 @@ COMPSCI PETROLEUM COMPANY
 Regular				17.9 gallons @ 1.359
 ----------------------------------------
 Gasoline							24.33
-Wash Y								2.00
+Wash Y								0.60
 									------
-Total Due							26.33
+Total Due							24.93
 ----------------------------------------
 
 
