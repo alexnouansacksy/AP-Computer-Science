@@ -34,7 +34,13 @@ public class Cl214c {
 
         myGasCost = myGallons * myPerGallon;
         if (myCarWash.equals("Y")) {
-            if(myGallons < 20) myWashCost = 2;
+            if(myGallons < 20) {
+                if (myGallons > 10) {
+                    myWashCost = (2 - (0.2 * (myGallons % 10)));
+                } else {
+                    myWashCost = 2;
+                }
+            }   
         }
         myGrandTotal = myGasCost + myWashCost;
     }
