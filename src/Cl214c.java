@@ -36,7 +36,7 @@ public class Cl214c {
         if (myCarWash.equals("Y")) {
             if(myGallons < 20) {
                 if (myGallons > 10) {
-                    myWashCost = (2 - (0.2 * (myGallons % 10)));
+                    myWashCost = (2 - (0.2 * ((int) myGallons % 10)));
                 } else {
                     myWashCost = 2;
                 }
