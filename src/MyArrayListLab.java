@@ -1,4 +1,4 @@
-/*import java.util.*;
+import java.util.*;
 public class MyArrayListLab {
     public static void main(String[] args) {
         IntArrayList list = new IntArrayList();
@@ -31,4 +31,52 @@ public class MyArrayListLab {
         }
     }
 }
-*/
+/*
+Testing add() and get()...
+list.get(0) = 0
+list.get(1) = 1
+list.get(2) = 2
+list.get(3) = 3
+list.get(4) = 4
+list.get(5) = 5
+list.get(6) = 6
+list.get(7) = 7
+list.get(8) = 8
+list.get(9) = 9
+
+Testing set()...
+list.get(0) = 0
+list.get(1) = 2
+list.get(2) = 4
+list.get(3) = 6
+list.get(4) = 8
+list.get(5) = 10
+list.get(6) = 12
+list.get(7) = 14
+list.get(8) = 16
+list.get(9) = 18
+
+Testing remove()...
+list.get(0) = 2
+list.get(1) = 4
+list.get(2) = 6
+list.get(3) = 10
+list.get(4) = 12
+list.get(5) = 14
+list.get(6) = 18
+
+Testing indexOf()...
+list.indexOf(1) = -1
+list.indexOf(19) = -1
+list.indexOf(4) = 1
+list.indexOf(19) = -1
+list.indexOf(19) = -1
+list.indexOf(11) = -1
+list.indexOf(16) = -1
+list.indexOf(5) = -1
+list.indexOf(19) = -1
+list.indexOf(14) = 5
+
+Process finished with exit code 0
+
+ */

@@ -44,8 +44,18 @@ public class IntArrayList {
         mySize--;
         if (mySize <= (myCapacity * 0.25) ) halfCapacity();
     }
-
-    //public int get(int index) return{myArray[index]};
-
+    public int get(int index) {return myArray[index];}
+    public void set(int index, int num) {
+        myArray[index] = num;
+    }
+    public int size() {return mySize;}
+    public int[] toArray() {return myArray;}
+    public int indexOf(int num) {
+        int index = -1;
+        for (int lcv = 0; lcv < mySize; lcv++) {
+            if (myArray[lcv] == num) index = lcv;
+        }
+        return index;
+    }
 
 }
