@@ -1,3 +1,6 @@
+// Alex Nouansacksy
+// Prog470b
+// 01/05/2023
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
