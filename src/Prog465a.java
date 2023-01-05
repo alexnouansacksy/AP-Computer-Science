@@ -1,12 +1,13 @@
+// Alex Nouansacksy
+// Prog465a
+// 01/05/2023
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
 import static java.lang.System.out;
 
-// Alex Nouansacksy
-// Prog465a
-// 01/05/2023
+
 public class Prog465a {
     public static void main(String[] args) {
         try {
