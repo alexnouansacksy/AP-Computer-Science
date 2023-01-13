@@ -41,10 +41,20 @@ public class Prog465b {
 
             out.println("\nNumbers Less Than 100");
             out.println("Rows\tColumn");
-            for (int i = 0; i < second.size(); i++) {
-                out.print(second.get(i) + "\t\t" + second.get(i + 1));
+            int[][] display = new int[second.size()/2] [2];
+
+            int cnt = 0;
+
+            for (int i = 0; i < display.length; i++) {
+                for (int j = 0; j < display[0].length; j++) {
+                    display[i][j] = second.get(cnt);
+                    cnt++;
+                }
+            }
+
+            for (int[] row : display) {
+                for (int num:row) out.print(num + "\t\t");
                 out.println();
-                i++;
             }
 
         } catch (IOException e) {
