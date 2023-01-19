@@ -37,18 +37,57 @@ public class Prog477a {
                     wow[5][2] = wow[5][0] + wow[5][1];
                 }
             }
-            //out.println("Grade\tMale\tFemale\tTotal\nA\nB\nC\nD\nF\nTotals");
+            out.println("Grade\tMale\tFemale\tTotal");
 
-            for (int[] rows : wow) {
-                out.print("A\t");
-                for (int n : rows) {
-                    out.print(n + "\t");
-                }
-                out.println();
-            }
+            int[] temp;
+
+            out.print("A\t\t");
+            temp = wow[0];
+            for (int i : temp) out.print (i + "\t\t");
+            out.println();
+
+            out.print("B\t\t");
+            temp = wow[1];
+            for (int i : temp) out.print (i + "\t\t");
+            out.println();
+
+            out.print("C\t\t");
+            temp = wow[2];
+            for (int i : temp) out.print (i + "\t\t");
+            out.println();
+
+            out.print("D\t\t");
+            temp = wow[3];
+            for (int i : temp) out.print (i + "\t\t");
+            out.println();
+
+            out.print("F\t\t");
+            temp = wow[4];
+            for (int i : temp) out.print (i + "\t\t");
+            out.println();
+
+            out.println("---------------------------");
+
+            out.print("Total\t");
+            temp = wow[5];
+            for (int i : temp) out.print (i + "\t\t");
+            out.println();
 
         } catch (IOException e) {
             out.println("Can't find data file!");
         }
     }
 }
+/*
+Grade	Male	Female	Total
+A		2		4		6
+B		4		4		8
+C		4		7		11
+D		2		3		5
+F		3		0		3
+---------------------------
+Total	15		18		33
+
+Process finished with exit code 0
+
+ */
