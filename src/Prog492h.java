@@ -13,7 +13,7 @@ public class Prog492h {
         try {
             Scanner keyboard = new Scanner(new File("data/prog492h.dat"));
 
-            String[][] mat = new String[30][30];
+            String[][] mat = new String[31][30];
 
             for(int row = 0; row < mat.length; row++) {
                 for (int col = 0; col < mat[0].length; col++) {
