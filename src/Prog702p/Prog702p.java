@@ -104,3 +104,72 @@ public class Prog702p {
         }
     }
 }
+/*
+Hiccas's name is: Billy
+Its special word is: Buckner
+It's fur is worth: $3.25
+
+Wallie's name is: Fred
+It's special word is: Ballony
+Wallie has taken: 28 steps
+
+Beeper's name is : Nick
+Its special word is: Cuccia
+Beeper's word is: coolbeans
+
+Hiccas's name is: Murray
+Its special word is: Cox
+It's fur is worth: $4.0
+
+Hiccas's name is: Carly
+Its special word is: Seifert
+It's fur is worth: $2.58
+
+Hiccas's name is: Elias
+Its special word is: Smith
+It's fur is worth: $3.22
+
+Wallie's name is: Katy
+It's special word is: Rumberger
+Wallie has taken: 45 steps
+
+Wallie's name is: Tanya
+It's special word is: Barton
+Wallie has taken: 78 steps
+
+Wallie's name is: Casey
+It's special word is: Bats
+Wallie has taken: 97 steps
+
+Wallie's name is: Brandon
+It's special word is: Davis
+Wallie has taken: 68 steps
+
+Beeper's name is : Ingrid
+Its special word is: Sink
+Beeper's word is: superdude
+
+Beeper's name is : Nico
+Its special word is: Binge
+Beeper's word is: attaway
+
+Beeper's name is : Mike
+Its special word is: Break
+Beeper's word is: done
+
+Hiccas's name is: Brad
+Its special word is: Williamson
+It's fur is worth: $2.75
+
+Hiccas's name is: Lorenzo
+Its special word is: Rapp
+It's fur is worth: $2.55
+
+The average value of the Hicca fur is: 3.06
+The average number of steps taken by Wallies is 63.20
+The average size of the Beepers words is: 7.25
+
+The most common letter(s) in all the Beepers' words is: a e
+Process finished with exit code 0
+
+ */
