@@ -8,4 +8,5 @@ public class Wallies extends Animal{
         myNumSteps = steps;
     }
 
+    public int getNumSteps() {return myNumSteps;}
 }
