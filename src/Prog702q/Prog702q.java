@@ -1,3 +1,6 @@
+// Alex Nouansacksy
+// Prog 702q
+// 01/26/2023
 package Prog702q;
 
 import java.io.File;

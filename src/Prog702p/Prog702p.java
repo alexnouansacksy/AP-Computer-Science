@@ -3,10 +3,6 @@
 // 01/25/2023
 package Prog702p;
 
-import Prog701g.Admin;
-import Prog701g.Person;
-import Prog701g.Student;
-import Prog701g.Teacher;
 
 import java.io.File;
 import java.io.IOException;
