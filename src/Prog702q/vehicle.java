@@ -3,12 +3,11 @@ package Prog702q;
 public class vehicle implements names{
     private String myName;
     private int myTires;
-    private double myValue;
+    double myValue;
 
-    public vehicle (String name, int numTires, double value) {
+    public vehicle (String name, int numTires) {
         myName = name;
         myTires = numTires;
-        myValue = value;
     }
 
     public String getName() {return myName;}

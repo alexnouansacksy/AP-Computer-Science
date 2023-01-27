@@ -1,6 +1,6 @@
 package Prog701g;
 
-public class    Student extends Person {
+public class Student extends Person {
     private double myGPA;
 
     public Student(String f, String l, double gpa) {
