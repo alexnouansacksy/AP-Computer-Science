@@ -41,13 +41,13 @@ Enter height: 5
 Enter width: 10
 Enter triangle base: 30
 Enter triangle height: 50
-class Circle
+Circle
 Area: 38.48
 Circumference 21.99
-class Rectangle
+Rectangle
 Area: 50.0
 Perimeter: 30.0
-class Triangle
+Triangle
 Area 750.0
 Perimeter 138.309518948453
 
