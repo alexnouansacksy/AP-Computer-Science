@@ -22,6 +22,6 @@ public class Circle implements Shape {
     }
 
     public void printClass() {
-        out.println(this.getClass());
+        out.println(this.getClass().getSimpleName());
     }
 }

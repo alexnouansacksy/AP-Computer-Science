@@ -9,6 +9,6 @@ public abstract class NotCircle implements Shape{
     public abstract void setHeight(double h);
 
     public void printClass() {
-        out.println(this.getClass());
+        out.println(this.getClass().getSimpleName());
     }
 }
