@@ -23,8 +23,17 @@ public class Prog492h {
                 }
             }
 
+            int[][] temp = new int[rows][cols];
 
-            for (int i = 0; i < 15; i++) {
+            for (int row = 0; row < mat.length; row ++) {
+                for (int col = 0; col < mat[0].length; col++) {
+                    temp[row][col] = mat[row][col];
+                }
+            }
+
+
+            for (int i = 0; i <= 15; i++) {
+                out.println("Generation " + i);
 
                 for (int[] row : mat) {
                     for (int n : row) {
@@ -34,21 +43,11 @@ public class Prog492h {
                     out.println();
                 }
 
-                int[][] temp = new int[rows][cols];
-
-                for (int row = 0; row < mat.length; row ++) {
-                    for (int col = 0; col < mat[0].length; col++) {
-                        temp[row][col] = mat[row][col];
-                    }
-                }
-
-
                 int neighbors = 0;
 
-                for (int row = 0; row < mat.length; row ++) {
-                    for (int col = 0; col < mat[0].length; col++) {
-                        if (row - 1 < 0 || col - 1 < 0) neighbors = neighbors;
-                        else {
+                for (int row = 0; row < mat.length - 1; row ++) {
+                    for (int col = 0; col < mat[0].length - 1; col++) {
+                        if (row - 1 >= 0 && col - 1 >= 0) {
                             if (mat[row - 1][col - 1] == 1) neighbors++;
                             if (mat[row - 1][col] == 1) neighbors++;
                             if (mat[row - 1][col + 1] == 1) neighbors++;
@@ -59,13 +58,24 @@ public class Prog492h {
                             if (mat[row + 1][col + 1] == 1) neighbors++;
                         }
 
+
                         if (neighbors == 3 && mat[row][col] == 0) {
                             temp[row][col] = 1;
                         } else if (neighbors >= 4 && mat[row][col] == 1) {
                             temp[row][col] = 0;
+                        } else if (neighbors < 1 && mat[row][col] == 1) {
+                            temp[row][col] = 0;
                         }
+
                     }
                 }
+
+                for (int row = 0; row < mat.length; row ++) {
+                    for (int col = 0; col < mat[0].length; col++) {
+                        mat[row][col] = temp[row][col];
+                    }
+                }
+
 
             }
 
