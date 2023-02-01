@@ -45,9 +45,9 @@ public class Prog492h {
 
                 int neighbors = 0;
 
-                for (int row = 0; row < mat.length - 1; row ++) {
-                    for (int col = 0; col < mat[0].length - 1; col++) {
-                        if (row - 1 >= 0 && col - 1 >= 0) {
+                for (int row = 0; row < rows ; row ++) {
+                    for (int col = 0; col < cols ; col++) {
+                        if (row - 1 >= 0 && col - 1 >= 0 && row + 1 < rows && col + 1 < cols) {
                             if (mat[row - 1][col - 1] == 1) neighbors++;
                             if (mat[row - 1][col] == 1) neighbors++;
                             if (mat[row - 1][col + 1] == 1) neighbors++;
@@ -56,19 +56,22 @@ public class Prog492h {
                             if (mat[row + 1][col - 1] == 1) neighbors++;
                             if (mat[row + 1][col] == 1) neighbors++;
                             if (mat[row + 1][col + 1] == 1) neighbors++;
-                        }
 
-
-                        if (neighbors == 3 && mat[row][col] == 0) {
-                            temp[row][col] = 1;
-                        } else if (neighbors >= 4 && mat[row][col] == 1) {
-                            temp[row][col] = 0;
-                        } else if (neighbors < 1 && mat[row][col] == 1) {
-                            temp[row][col] = 0;
+                            if (neighbors == 3 && mat[row][col] == 0) {
+                                temp[row][col] = 1;
+                            } else if (neighbors >= 4 && mat[row][col] == 1) {
+                                temp[row][col] = 0;
+                            } else if (neighbors < 1 && mat[row][col] == 1) {
+                                temp[row][col] = 0;
+                            }
                         }
 
                     }
                 }
+
+
+
+
 
                 for (int row = 0; row < mat.length; row ++) {
                     for (int col = 0; col < mat[0].length; col++) {
