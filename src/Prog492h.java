@@ -1,6 +1,6 @@
 // Alex Nouansacksy
- // Prog492h
- // 01/23/2023
+// Prog492h
+// 01/23/2023
 
  import java.io.File;
  import java.io.IOException;
@@ -59,14 +59,14 @@
                              if (mat[temprow][tempcol] == 1) neighbors++;
                          }
 
-                         temprow = row - 1; // top left
-                         tempcol = col; // top
+                         temprow = row - 1; // top
+                         tempcol = col;
                          if (temprow >= 0) {
                              if (mat[temprow][tempcol] == 1) neighbors++;
                          }
 
-                         temprow = row - 1; // top left
-                         tempcol = col + 1; // top right
+                         temprow = row - 1; // top right
+                         tempcol = col + 1;
                          if (temprow >= 0 && tempcol < mat[0].length) {
                              if (mat[temprow][tempcol] == 1) neighbors++;
                          }
