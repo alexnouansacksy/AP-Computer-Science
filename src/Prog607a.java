@@ -41,14 +41,23 @@ public class Prog607a {
                 char fourth = code.charAt(3);
 
                 int month = first - 64;
-                if (second == 70) {
-                    int firstDay = 0;
+                int firstDay;
+                if (second == 79) {
+                     firstDay = 0;
                 } else {
-                    int firstDay = 80;
+                     firstDay = second - 80;
                 }
+                int secondDay;
+                if (third == 79) {
+                    secondDay = 0;
+                } else {
+                    secondDay = third - 80;
+                }
+                int year;
+                year = 1970 + (27 - (fourth - 64));
 
 
-                out.print(month);
+                out.print("The date is: " + month + "/" + firstDay + "" + secondDay + "/" + year + "\n");
 
             }
 
@@ -60,3 +69,75 @@ public class Prog607a {
     }
 
 }
+/*
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 1
+Enter month: 9
+Enter day: 14
+Enter year: 83
+The code is: IQTN
+
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 1
+Enter month: 1
+Enter day: 14
+Enter year: 84
+The code is: AQTM
+
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 2
+Enter code: IQTN
+The date is: 9/14/1983
+
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 2
+Enter code: AOQV
+The date is: 1/01/1975
+
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 1
+Enter month: 1
+Enter day: 1
+Enter year: 75
+The code is: AOQV
+
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 2
+Enter code: KORH
+The date is: 11/02/1989
+
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 2
+Enter code: AQTM
+The date is: 1/14/1984
+
+---menu----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option: 0
+
+Process finished with exit code 0
+
+ */
