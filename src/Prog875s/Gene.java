@@ -1,5 +1,5 @@
 package Prog875s;
-
+import static java.lang.System.out;
 public class Gene extends Fasta {
     private String organism;
     private String geneName;
@@ -12,7 +12,7 @@ public class Gene extends Fasta {
         geneID = headerParts[0];
         geneName = headerParts[1];
         organism = headerParts[2];
-        organism = organism.substring(organism.indexOf("="+1, organism.length() - 1));
+        organism = organism.substring(organism.indexOf("=")+1, organism.length()-1);
         description = headerParts[3];
     }
     public boolean compare(Gene other) {return super.compare(other);}
@@ -37,7 +37,7 @@ public class Gene extends Fasta {
 
         // Fill in the rest of the matrix
         for (int lcv = 1; lcv < matrix.length; lcv++) {
-            for (int lcv2 = 1; lcv2 < matrix[0].length; lcv2++) {
+            for (int lcv2 = 1; lcv2 < matrix[lcv].length; lcv2++) {
                 match = 0;
                 if (!getSequence().substring(lcv - 1, lcv).equals(other.getSequence().substring(lcv2 - 1, lcv2))) {
                     match = mismatchPenalty;
@@ -58,9 +58,9 @@ public class Gene extends Fasta {
         while (i > 0 && j > 0) {
             match = 0;
             if(!getSequence().substring(i-1,i).equals(other.getSequence().substring(j-1,j))) match = mismatchPenalty;
-            diag = matrix[i-1][j-1];
-            left = matrix[i][j-1];
-            up = matrix[i-1][j];
+            diag = matrix[i-1][j-1] + match;
+            left = matrix[i][j-1] + gapPenalty;
+            up = matrix[i-1][j] + gapPenalty;
 
             if (matrix[i][j] == diag) {
                 alignment1 = this.getSequence().substring(i-1, i) + alignment1;
@@ -68,7 +68,22 @@ public class Gene extends Fasta {
                 i--;
                 j--;
             }
+            else if (matrix[i][j] == left) {
+                alignment1 = "_" + alignment1;
+                alignment2 = other.getSequence().substring(j-1,j) + alignment2;
+                j--;
+            } else if (matrix[i][j] == up) {
+                alignment1 = this.getSequence().substring(i-1, i) + alignment1;
+                alignment2 = "_" + alignment2;
+                i--;
+            }
         }
-        return -1;
+
+        // Print alignment
+        int score = matrix[matrix.length - 1][matrix[0].length - 1];
+        out.println(this.organism + " gene " + this.geneID + ": \n\t" + alignment1);
+        out.println(other.organism + " gene " + other.geneID + ": \n\t" + alignment2);
+        out.println("Alignment score: " + score);
+        return score;
     }
 }
