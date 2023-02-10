@@ -12,7 +12,7 @@ public class Prog460a {
     public static void main(String[] args) {
         try {
             Scanner keyboard = new Scanner(new File("data/sort.dat"));
-            int[] list = new int[100];
+            int[] list = new int[60];
             int count = 0;
             while(keyboard.hasNext()) {
                 list[count] = keyboard.nextInt();
@@ -38,17 +38,16 @@ public class Prog460a {
     }
 }
 /*
+Enter a number to search for: 92
+Your number occurs at position: 53
 Enter a number to search for: 110
 Your number does not occur in this list
-Enter a number to search for: 52
-Your number occurs at position: 75
 Enter a number to search for: 1
-Your number occurs at position: 41
-Enter a number to search for: 92
-Your number occurs at position: 93
+Your number occurs at position: 1
 Enter a number to search for: -1
 Your number does not occur in this list
 
 Process finished with exit code 0
+
 
  */
