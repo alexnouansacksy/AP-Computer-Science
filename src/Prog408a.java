@@ -10,7 +10,7 @@ import static java.lang.System.out;
 public class Prog408a {
     public static void main(String[] args) {
         try {
-            Scanner keyboard = new Scanner(new File("data/prog285b.dat"));
+            Scanner keyboard = new Scanner(new File("data/prg408a.dat"));
             Cl408a[] list = new Cl408a[21];
             int cnt = 0;
             while (keyboard.hasNext()) {
@@ -30,3 +30,30 @@ public class Prog408a {
         }
     }
 }
+/*
+Id	Score
+365	265
+306	262
+115	257
+311	256
+123	253
+325	246
+116	246
+323	245
+321	245
+113	243
+218	243
+208	242
+302	242
+104	239
+112	239
+110	238
+223	230
+213	229
+207	228
+203	224
+222	223
+
+Process finished with exit code 0
+
+ */
