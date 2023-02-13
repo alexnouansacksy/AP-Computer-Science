@@ -1,3 +1,4 @@
+// used with prog460a
 public class SearchAlgs {
     public static int linearsearch(int[] array, int x) {
         for (int i = 0; i < array.length; i++) {
