@@ -3,3 +3,4 @@ sorting algorithms - 408a/sortingalgs
 recursion - prog162a recursive
 inheritance - prog702p
 classes - prog52aclass/cl52a
+binary convert - prog910a
