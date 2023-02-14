@@ -2,6 +2,7 @@
 // Prog152a Recursive
 // 02/13/2023
 import static java.lang.System.out;
+import java.util.*;
 
 public class Prog152aRecursive {
   public static int sum(int n, int max) {
