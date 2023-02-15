@@ -23,6 +23,9 @@ public class Prog295c {
                 out.println(a);
             }
 
+            for (int i = 0; i < list.size(); i ++) {
+            }
+
         } catch (IOException e) {
             out.println("Can't find data file!");
         }
