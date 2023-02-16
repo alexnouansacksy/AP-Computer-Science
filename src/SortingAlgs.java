@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class SortingAlgs {
     public static int[] bubbleSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
@@ -47,6 +49,19 @@ public class SortingAlgs {
                 j--;
             }
             array[j +1] = temp;
+        }
+        return array;
+    }
+
+    public static ArrayList<Cl295c> insertionSort(ArrayList<Cl295c> array) {
+        for(int i = 1; i < array.size(); i++) {
+            Cl295c temp = array.get(i);
+            int j = i - 1;
+            while (j >= 0 && array.get(j).getIntSSN() > temp.getIntSSN()) {
+                array.set(j + 1, array.get(j));
+                j--;
+            }
+            array.set(j + 1, temp);
         }
         return array;
     }
