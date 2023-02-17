@@ -1,6 +1,6 @@
 // Alex Nouansacksy
 // Prog910a
-// 02/24/2023
+// 02/14/2023
 import java.util.Scanner;
 import static java.lang.System.out;
 
@@ -22,3 +22,21 @@ public class Prog910a {
         }
     }
 }
+/*
+Enter the number to be converted: 32767
+111111111111111
+
+Enter the number to be converted: 25
+11001
+
+Enter the number to be converted: 359
+101100111
+
+Enter the number to be converted: 256
+100000000
+
+Enter the number to be converted: -1
+
+Process finished with exit code 0
+
+ */

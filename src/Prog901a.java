@@ -1,12 +1,14 @@
+// Alex Nouansacksy
+// Prog901a
+// 02/16/2023
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
 import static java.lang.System.out;
 
-// Alex Nouansacksy
-// Prog901a
-// 02/16/2023
+
 public class Prog901a {
     public static void main(String[] args) {
         try {
