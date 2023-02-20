@@ -11,7 +11,7 @@ public class Prog910b {
             int remainder = num % base;
             num = num / base;
             convertBase(num, base);
-            out.print(remainder);
+            out.print(remainder + " ");
         }
     }
 
