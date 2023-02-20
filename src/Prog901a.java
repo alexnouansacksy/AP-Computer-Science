@@ -9,13 +9,20 @@ import java.util.Scanner;
 import static java.lang.System.out;
 
 
+
 public class Prog901a {
+    public static String reverseString(String s) {
+        return "";
+    }
+
+    public static void printFile(Scanner input) {
+
+    }
+
     public static void main(String[] args) {
         try {
             Scanner keyboard = new Scanner(new File("data/prog512h.dat"));
-            String phrase = "";
-            while (keyboard.hasNext()) phrase = phrase + keyboard.next() + " ";
-            out.print(phrase);
+            printFile(keyboard);
         } catch (IOException e) {
             out.println("Can't find data file!");
         }
