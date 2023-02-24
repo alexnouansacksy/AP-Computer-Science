@@ -5,13 +5,9 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
-import static java.lang.System.in;
 import static java.lang.System.out;
-
-
 
 public class Prog901a {
     public static String reverseString(String s) {
@@ -27,6 +23,13 @@ public class Prog901a {
             String[] test2 = test.split(" ");
             for (String a : test2) list.add(a);
         }
+
+        for (String a : list) {
+            char[] b = a.toCharArray();
+            if (Character.isUpperCase(b[0])) out.println();
+            out.print(a + " ");
+        }
+        out.println("\n\nBackwards");
 
         for (int i = list.size(); i > 0; i--) {
             out.print(reverseString(list.get(i - 1)) + " ");
@@ -49,6 +52,26 @@ public class Prog901a {
     }
 }
 /*
+Good morning life and all
+Things glad and beautiful
+My pockets nothing hold
+But he that owns the gold
+The sun is my great friend
+His spending has no end
+Hail to the morning sky
+Which bright clouds measure high
+Hail to you birds whose throats
+Would number leaves by notes
+Hail to you shady bowers
+And you green fields of flowers
+Hail to you women fair
+That make a show so rare
+In cloth as white as milk
+Be it calico or silk
+Good morning life and all
+Things glad and beautiful
+
+Backwards
 lufituaeb dna dalg sgnihT
 lla dna efil gninrom dooG
 klis ro ocilac ti eB
