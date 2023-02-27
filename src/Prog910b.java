@@ -11,7 +11,11 @@ public class Prog910b {
             int remainder = num % base;
             num = num / base;
             convertBase(num, base);
-            out.print(remainder + " ");
+            if (remainder > 9) {
+                out.print((char) (60 + remainder - 5));
+            } else {
+                out.print(remainder);
+            }
         }
     }
 
@@ -34,6 +38,10 @@ public class Prog910b {
     }
 }
 /*
+Enter the number base 10 to convert: 255
+Enter the new base: 16
+The number 255 [base 10] = FF [base 16]
+
 Enter the number base 10 to convert: 256
 Enter the new base: 16
 The number 256 [base 10] = 100 [base 16]
