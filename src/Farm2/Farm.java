@@ -1,5 +1,10 @@
 package Farm2;
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
+
+import static java.lang.System.out;
+
 public class Farm implements IFarm {
     private ArrayList<Horse> myHorses;
     private ArrayList<Cow> myCows;
@@ -7,6 +12,8 @@ public class Farm implements IFarm {
     private int myNumCorn;
     private double myHayCost;
     private double myCornCost;
+
+
 
     public boolean feedAllAnimals() {
         return false;
