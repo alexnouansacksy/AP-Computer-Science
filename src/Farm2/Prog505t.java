@@ -11,7 +11,11 @@ public class Prog505t {
         try {
             Scanner keyboard = new Scanner(new File("data/prog505t.dat"));
 
-            int myNumHayBales = keyboard.nextInt();
+            int hay = keyboard.nextInt();
+            double hayCost = keyboard.nextDouble();
+            int corn = keyboard.nextInt();
+            double cornCost = keyboard.nextDouble();
+
 
 
         } catch (IOException e) {
