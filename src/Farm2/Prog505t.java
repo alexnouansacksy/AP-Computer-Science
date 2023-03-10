@@ -49,7 +49,7 @@ public class Prog505t {
 
             out.println("Income for the day is $" + farm.farmIncome());
             out.println("Cost for feeding for the day is $" + farm.getCost());
-            out.println("Cumulative weight of the animals is " + farm.getWeight());
+            out.println("Cumulative weight of the animals is " + farm.getWeight() + " lbs");
             farm.feedAllAnimals();
             farm.removeCows();
             farm.removeHorses();
@@ -68,5 +68,21 @@ public class Prog505t {
         }
     }
 }
+/*
+Income for the day is $259.4
+Cost for feeding for the day is $180.5
+Cumulative weight of the animals is 42835 lbs
+All animals have been fed.
+There are 939 hay bales remaining.
+There is 2420 corn remaining.
+Removed a cow that produced 0 gallons of milk a day.
+Removed a cow that produced 18 gallons of milk a day.
+Removed a cow that produced 22 gallons of milk a day.
+Removed a horse that makes $1.2
+Removed a horse that makes $2.4
+First cow now has a weight of 1250, produces 80 pounds of milk a day, eats 3 hay bales per day, and eats 4 cobs of corn a day.
+There are now 12 cows and 8 horses.
 
+Process finished with exit code 0
 
+ */

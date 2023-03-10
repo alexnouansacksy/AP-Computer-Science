@@ -78,7 +78,7 @@ public class Farm implements IFarm {
             myNumHayBales -= hayNeeded;
             myNumCorn -= cornNeeded;
             out.println("All animals have been fed.\n" + "There are " + myNumHayBales + " hay bales remaining.\nThere is "
-            + myNumCorn + " corn reamining. ");
+            + myNumCorn + " corn remaining. ");
         } else if ((cornNeeded > myNumCorn) && (hayNeeded > myNumHayBales)) {
             out.println((cornNeeded - myNumCorn) + " more corn is needed\n" + (hayNeeded - myNumHayBales) + "more hay bales are needed.");
         } else if (cornNeeded > myNumCorn) {
