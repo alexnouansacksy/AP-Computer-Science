@@ -11,4 +11,9 @@ public class Animal {
         myCorn = corn;
     }
 
+    public int getWeight() {return myWeight;}
+    public int getHayBales() {return myHayBales;}
+    public int getCorn() {return myCorn;}
+
+
 }

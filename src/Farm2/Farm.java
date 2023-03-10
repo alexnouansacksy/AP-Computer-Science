@@ -13,7 +13,7 @@ public class Farm implements IFarm {
     private double myHayCost;
     private double myCornCost;
 
-    public Farm (ArrayList<Animal> horses, ArrayList<Animal> cows, int hay, double haycost, int corn, double corncost) {
+    public Farm (ArrayList<Horse> horses, ArrayList<Cow> cows, int hay, double haycost, int corn, double corncost) {
         myNumHayBales = hay;
         myNumCorn = corn;
         myHayCost = haycost;
@@ -29,8 +29,15 @@ public class Farm implements IFarm {
     }
 
     public double farmIncome() {
-        for (Animal a : myHorses) {
+        double horsesMoney = 0;
+        for (Horse a : myHorses) {
+            horsesMoney += horseIncome(a.getRides(), a.getRidesCost());
         }
+        double cowsMoney = 0;
+        for (Cow a: myCows) {
+            cowsMoney += cowIncome(0.2, a.getMilkProduced());
+        }
+        return horsesMoney + cowsMoney;
     }
 
 

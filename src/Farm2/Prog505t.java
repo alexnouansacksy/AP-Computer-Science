@@ -16,8 +16,8 @@ public class Prog505t {
             int corn = keyboard.nextInt();
             double cornCost = keyboard.nextDouble();
 
-            ArrayList<Animal> cows = new ArrayList<Animal>();
-            ArrayList<Animal> horses = new ArrayList<Animal>();
+            ArrayList<Cow> cows = new ArrayList<Cow>();
+            ArrayList<Horse> horses = new ArrayList<Horse>();
 
             int numcows = keyboard.nextInt();
             for (int i = 0; i < numcows; i ++) {
