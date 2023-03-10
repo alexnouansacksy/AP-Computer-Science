@@ -44,7 +44,12 @@ public class Prog505t {
 
             Farm farm = new Farm(cows, horses, hay, hayCost, corn, cornCost);
 
-            out.print(farm.farmIncome());
+            out.println("Income for the day is $" + farm.farmIncome());
+            out.println("Cost for feeding for the day is $" + farm.getCost());
+            out.println("Cumulative weight of the animals is " + farm.getWeight());
+            farm.feedAllAnimals();
+            farm.removeCows();
+            farm.removeHorses();
 
 
 

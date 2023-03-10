@@ -8,6 +8,8 @@ public class Cow extends Animal{
         myMilkProduced = milk;
     }
 
+    public void setMilk(int milk) {myMilkProduced = milk;}
+
     public int getMilkProduced() {return myMilkProduced;}
 
 }

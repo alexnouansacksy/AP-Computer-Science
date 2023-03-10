@@ -43,23 +43,91 @@ public class Farm implements IFarm {
     }
 
     public double getCost() {
-        return 0;
+        double totCost = 0;
+        for (Horse a : myHorses) {
+            totCost += a.getHayBales() * myHayCost;
+            totCost += a.getCorn() * myCornCost;
+        }
+        for (Cow a : myCows) {
+            totCost += a.getHayBales() * myHayCost;
+            totCost += a.getCorn() * myCornCost;
+        }
+        return totCost;
     }
-
-    public boolean feedAllAnimals() {return true;}
-
 
     public int getWeight() {
-        return 0;
+        int totWeight = 0;
+        for (Horse a : myHorses) totWeight += a.getWeight();
+        for (Cow a: myCows) totWeight += a.getWeight();
+        return totWeight;
     }
 
+    public boolean feedAllAnimals() {
+        int cornNeeded = 0;
+        int hayNeeded = 0;
+        for (Horse horse : myHorses) {
+            cornNeeded += horse.getCorn();
+            hayNeeded += horse.getHayBales();
+        }
+        for (Cow cow : myCows) {
+            cornNeeded += cow.getCorn();
+            hayNeeded += cow.getHayBales();
+        }
+        boolean sufficient = ((cornNeeded < myNumCorn) && (hayNeeded < myNumHayBales));
+        if (sufficient) {
+            myNumHayBales -= hayNeeded;
+            myNumCorn -= cornNeeded;
+            out.println("All animals have been fed.\n" + "There are " + myNumHayBales + " hay bales remaining.\nThere is "
+            + myNumCorn + " corn reamining. ");
+        } else if ((cornNeeded > myNumCorn) && (hayNeeded > myNumHayBales)) {
+            out.println((cornNeeded - myNumCorn) + " more corn is needed\n" + (hayNeeded - myNumHayBales) + "more hay bales are needed.");
+        } else if (cornNeeded > myNumCorn) {
+            out.println((cornNeeded - myNumCorn) + " more corn is needed.");
+        } else if (hayNeeded > myNumHayBales) {
+            out.println((hayNeeded - myNumHayBales) + " more hay bales are needed.");
+        }
+        return sufficient;
+    }
+
+    public ArrayList<Cow> removeCows() {
+        for (int i = 0; i < 3; i++) {
+            int lowest = 0;
+            int leastMilk = Integer.MAX_VALUE;
+            for (int j = 0; j < myCows.size(); j++) {
+                if (myCows.get(j).getMilkProduced() < leastMilk) {
+                    lowest = j;
+                    leastMilk = myCows.get(j).getMilkProduced();
+                }
+            }
+            out.println("Removed a cow that produced " + leastMilk + " gallons of milk a day.");
+            myCows.remove(lowest);
+        }
+        return myCows;
+    }
+
+    public ArrayList<Horse> removeHorses() {
+        for (int i = 0; i < 2; i++) {
+            int lowest = 0;
+            double lowestIncome = Integer.MAX_VALUE;
+            for (int j = 0; j < myHorses.size(); j++) {
+                double income = horseIncome(myHorses.get(j).getRides(), myHorses.get(j).getRidesCost());
+                if (income < lowestIncome) {
+                    lowest = j;
+                    lowestIncome = income;
+                }
+            }
+            out.println("Removed a horse that made $" + lowestIncome);
+            myHorses.remove(lowest);
+        }
+        return myHorses;
+    }
 
     public ArrayList<Cow> getCows() {
-        return null;
+        return myCows;
     }
 
     public ArrayList<Horse> getHorses() {
-        return null;
+        return myHorses;
     }
 
 
