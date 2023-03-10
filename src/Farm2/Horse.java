@@ -10,6 +10,7 @@ public class Horse extends Animal{
         myRidesCost = cost;
     }
 
+
     public int getRides() {return myRides;}
     public double getRidesCost() {return myRidesCost;}
 }

@@ -116,11 +116,13 @@ public class Farm implements IFarm {
                     lowestIncome = income;
                 }
             }
-            out.println("Removed a horse that made $" + lowestIncome);
+            out.println("Removed a horse that makes $" + lowestIncome);
             myHorses.remove(lowest);
         }
         return myHorses;
     }
+
+
 
     public ArrayList<Cow> getCows() {
         return myCows;

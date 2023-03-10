@@ -1,4 +1,7 @@
 package Farm2;
+// Alex Nouansacksy
+// FARM (Prog505t)
+// 03/10/2023
 
 import java.io.File;
 import java.io.IOException;
@@ -50,7 +53,14 @@ public class Prog505t {
             farm.feedAllAnimals();
             farm.removeCows();
             farm.removeHorses();
-
+            cows.get(0).setWeight(1250);
+            cows.get(0).setMilk(80);
+            cows.get(0).setHay(3);
+            cows.get(0).setCorn(4);
+            out.println("First cow now has a weight of " + cows.get(0).getWeight() +
+                    ", produces " + cows.get(0).getMilkProduced() + " pounds of milk a day, eats " + cows.get(0).getHayBales() +
+                    " hay bales per day, and eats " + cows.get(0).getCorn() + " cobs of corn a day.");
+            out.println("There are now " + cows.size() + " cows and " + horses.size() + " horses.");
 
 
         } catch (IOException e) {
@@ -58,3 +68,5 @@ public class Prog505t {
         }
     }
 }
+
+
