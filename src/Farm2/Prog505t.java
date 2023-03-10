@@ -44,7 +44,7 @@ public class Prog505t {
 
             Farm farm = new Farm(cows, horses, hay, hayCost, corn, cornCost);
 
-
+            out.print(farm.farmIncome());
 
 
 

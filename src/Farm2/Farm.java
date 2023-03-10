@@ -13,11 +13,13 @@ public class Farm implements IFarm {
     private double myHayCost;
     private double myCornCost;
 
-    public Farm (ArrayList<Horse> horses, ArrayList<Cow> cows, int hay, double haycost, int corn, double corncost) {
+    public Farm (ArrayList<Cow> cows, ArrayList<Horse> horses, int hay, double haycost, int corn, double corncost) {
         myNumHayBales = hay;
         myNumCorn = corn;
         myHayCost = haycost;
         myCornCost = corncost;
+        myHorses = horses;
+        myCows = cows;
     }
 
     private double cowIncome(double perPound, int poundsProduced)  {
@@ -40,16 +42,17 @@ public class Farm implements IFarm {
         return horsesMoney + cowsMoney;
     }
 
+    public double getCost() {
+        return 0;
+    }
 
+    public boolean feedAllAnimals() {return true;}
 
 
     public int getWeight() {
         return 0;
     }
 
-    public double getCost() {
-        return 0;
-    }
 
     public ArrayList<Cow> getCows() {
         return null;
