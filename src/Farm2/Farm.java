@@ -78,7 +78,7 @@ public class Farm implements IFarm {
             myNumHayBales -= hayNeeded;
             myNumCorn -= cornNeeded;
             out.println("All animals have been fed.\n" + "There are " + myNumHayBales + " hay bales remaining.\nThere is "
-            + myNumCorn + " corn reamining. ");
+            + myNumCorn + " corn remaining. ");
         } else if ((cornNeeded > myNumCorn) && (hayNeeded > myNumHayBales)) {
             out.println((cornNeeded - myNumCorn) + " more corn is needed\n" + (hayNeeded - myNumHayBales) + "more hay bales are needed.");
         } else if (cornNeeded > myNumCorn) {
@@ -116,11 +116,13 @@ public class Farm implements IFarm {
                     lowestIncome = income;
                 }
             }
-            out.println("Removed a horse that made $" + lowestIncome);
+            out.println("Removed a horse that makes $" + lowestIncome);
             myHorses.remove(lowest);
         }
         return myHorses;
     }
+
+
 
     public ArrayList<Cow> getCows() {
         return myCows;
