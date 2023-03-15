@@ -27,7 +27,7 @@
         </constraints>
         <properties>
           <foreground color="-16777216"/>
-          <text value="Width"/>
+          <text value="Width "/>
         </properties>
       </component>
       <component id="1412c" class="javax.swing.JTextField" binding="txtLen">
