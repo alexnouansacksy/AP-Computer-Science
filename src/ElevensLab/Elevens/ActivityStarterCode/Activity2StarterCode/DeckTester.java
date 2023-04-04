@@ -22,7 +22,5 @@ public class DeckTester {
 		out.println(a.toString());
 		a.deal();
 		a.deal();
-		out.println(a.toString());
-
 	}
 }
