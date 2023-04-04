@@ -1,5 +1,6 @@
 package ElevensLab.Elevens.ActivityStarterCode.Activity2StarterCode;
 
+import java.lang.reflect.Array;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -13,7 +14,8 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	private List<Card> cards;
+	private ArrayList<Card> cards = new ArrayList<Card>();
+
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -32,13 +34,11 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		size = ranks.length;
-		int half = size / 2;
-		int cnt = 0;
-		for (int i = 0; i < ranks.length;i++) {
-			if (i == half) cnt++;
-			Card a = new Card(ranks[i], suits[cnt], values[i]);
-			cards.add(a);
+		for (String suit : suits) {
+			for (int j = 0; j < ranks.length; j++) {
+				Card c = new Card(ranks[j], suit, values[j]);
+				cards.add(c);
+			}
 		}
 	}
 
@@ -76,8 +76,11 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		Card c = new Card("a", "a", 2);
-		return c;
+		if (size != 0) {
+			size--;
+			return cards.get(size);
+		}
+		return cards.get(size);
 	}
 
 	/**
