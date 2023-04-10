@@ -85,11 +85,11 @@ public class Shuffler {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
 		int length = values.length;
 		int[] shuffled = new int[length];
-		length -= 1;
-		for (int k = 0; k < length; k++) {
+		length--;
+		for (int k = length; k>= 1; k--) {
 			int j = (int) (Math.random() * (length + 1));
 			while (values[k] == -1) {
-				j = (int) (Math.random() * (length + 1));
+				j = (int) (Math.random()	 * (length + 1));
 			}
 			shuffled[k] = values[j];
 			values[j] = -1;
