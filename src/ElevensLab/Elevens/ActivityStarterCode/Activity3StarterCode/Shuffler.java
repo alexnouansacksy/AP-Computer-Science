@@ -84,18 +84,6 @@ public class Shuffler {
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
 		int length = values.length;
-		int[] shuffled = new int[length];
-		length--;
-		for (int k = length; k>= 1; k--) {
-			int j = (int) (Math.random() * (length + 1));
-			while (values[k] == -1) {
-				j = (int) (Math.random()	 * (length + 1));
-			}
-			shuffled[k] = values[j];
-			values[j] = -1;
-		}
-		for (int i = 0; i < values.length; i++) {
-			values[i] = shuffled[i];
-		}
+		System.out.println((int) (Math.random()* (length + 1)));
 	}
 }
