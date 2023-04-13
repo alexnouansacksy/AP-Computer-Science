@@ -1,4 +1,4 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity9StarterCode;
+package ElevensLab.Elevens.ActivityStarterCode.Activity9StarterCode;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -56,6 +56,9 @@ public class ElevensBoard extends Board {
 	@Override
 	public boolean isLegal(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		if (selectedCards.size() == 3) {return containsJQK(selectedCards);}
+		else if (selectedCards.size() == 2) {return containsPairSum11(selectedCards);}
+		return false;
 	}
 
 	/**
@@ -69,6 +72,10 @@ public class ElevensBoard extends Board {
 	@Override
 	public boolean anotherPlayIsPossible() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		List<Integer> indexes = cardIndexes();
+		if (containsJQK(indexes)) return true;
+		if (containsPairSum11(indexes)) return true;
+		return false;
 	}
 
 	/**
@@ -81,7 +88,16 @@ public class ElevensBoard extends Board {
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		for (int i = 0; i < selectedCards.size(); i++) {
+			int card1 = selectedCards.get(i);
+			for (int j = i + 1; j < selectedCards.size(); j++) {
+				int card2 = selectedCards.get(j);
+				if (cardAt(card1).pointValue() + cardAt(card2).pointValue() == 11) return true;
+			}
+		}
+	return false;
 	}
+
 
 	/**
 	 * Check for a JQK in the selected cards.
@@ -93,5 +109,15 @@ public class ElevensBoard extends Board {
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		boolean king = false;
+		boolean queen = false;
+		boolean jack = false;
+		for (int a : selectedCards) {
+			if (cardAt(a).rank().equals("jack")) jack = true;
+			else if (cardAt(a).rank().equals("queen")) queen = true;
+			else if (cardAt(a).rank().equals("king")) king = true;
+		}
+	if (jack && queen && king) return true;
+	return false;
 	}
 }

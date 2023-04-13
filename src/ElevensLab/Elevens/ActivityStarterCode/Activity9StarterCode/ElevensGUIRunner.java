@@ -1,4 +1,4 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity9StarterCode;
+package ElevensLab.Elevens.ActivityStarterCode.Activity9StarterCode;
 
 /**
  * This is a class that plays the GUI version of the Elevens game.

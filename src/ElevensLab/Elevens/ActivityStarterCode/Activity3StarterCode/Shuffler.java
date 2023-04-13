@@ -83,7 +83,11 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-		int length = values.length;
-		System.out.println((int) (Math.random()* (length + 1)));
+		for (int k = values.length-1; k > 0; k--) {
+			int num = (int) (Math.random() * (k + 1));
+			int temp = values[num];
+			values[num] = values[k];
+			values[k] = temp;
+		}
 	}
 }

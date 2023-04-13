@@ -1,4 +1,4 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity4StarterCode;
+package ElevensLab.Elevens.ActivityStarterCode.Activity4StarterCode;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -65,6 +65,12 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		for (int i = size - 1; i >= 0; i--) {
+			int random = (int) (Math.random() * i);
+			Card temp = cards.get(random);
+			cards.set(random, cards.get(i));
+			cards.set(i, temp);
+		}
 	}
 
 	/**
