@@ -1,4 +1,4 @@
- 
+package SteganographyLab.StegStudentCode;
 
 import javax.swing.JColorChooser;
 import javax.swing.JFrame;
