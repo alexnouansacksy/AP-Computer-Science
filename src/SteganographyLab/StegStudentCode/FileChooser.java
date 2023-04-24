@@ -97,29 +97,36 @@ public class FileChooser
    * Method to get the directory for the media
    * @return the media directory
    */
-  public static String getMediaDirectory() 
+  public static String getMediaDirectory()
   {
     String directory = null;
     boolean done = false;
     File dirFile = null;
-    
-    // try to find the images directory
-      try {
-        // get the URL for where we loaded this class 
-        Class currClass = Class.forName("FileChooser");
-        URL classURL = currClass.getResource("FileChooser.class");
-        URL fileURL = new URL(classURL,"../images/");
-        directory = fileURL.getPath();
-        directory = URLDecoder.decode(directory, "UTF-8");
-        dirFile = new File(directory);
-        if (dirFile.exists()) {
-          //setMediaPath(directory);
-          return directory;
-        }
-      } catch (Exception ex) {
-      }
-      
-      return directory;
+
+// try to find the images directory
+    try {
+// Comment out all of these old lines of code
+
+// // get the URL for where we loaded this class
+// Class currClass = Class.forName("FileChooser");
+// URL classURL = currClass.getResource("FileChooser.class");
+// URL fileURL = new URL(classURL,"../images/");
+// directory = fileURL.getPath();
+// directory = URLDecoder.decode(directory, "UTF-8");
+// dirFile = new File(directory);
+// if (dirFile.exists()) {
+// //setMediaPath(directory);
+// return directory;
+// }
+
+// Change this line to whatever path your images are saved to
+// Right-click on one of the pictures > Copy Path/Reference > Path from Content Root
+      return "src/SteganographyLab/StegStudentCode/";
+
+    } catch (Exception ex) {
+    }
+
+    return directory;
   }
   
 }
