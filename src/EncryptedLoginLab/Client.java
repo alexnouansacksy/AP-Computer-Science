@@ -44,7 +44,7 @@ public class Client {
         String protocolMessage = "loginRequest;" + username + ";" + password;
         System.out.print("Sending request to host...");
         /**TODO: Encrypt the message before sending out *********/
-        outToServer.writeBytes(protocolMessage + "\n");
+        outToServer.writeBytes(EncryptDecrypt.encrypt(protocolMessage) + "\n");
         System.out.println(" Sent.");
 
         //Handle response from server

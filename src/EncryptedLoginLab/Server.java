@@ -38,6 +38,7 @@ public class Server {
 	        //Receive and parse protocol message
             String protocolMessage = inFromClient.readLine();
             /**TODO: Decrypt the message *****/
+            protocolMessage = EncryptDecrypt.decrypt(protocolMessage);
             System.out.println("Received from client: " + protocolMessage);
             String[] parsedProtocolMessage = protocolMessage.split(";");
 
