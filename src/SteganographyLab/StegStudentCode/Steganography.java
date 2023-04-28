@@ -92,7 +92,7 @@ public class Steganography {
 
         Picture test = hidePicture(beach, blueMotorcycle);
 
-        //beach2.explore();
+        beach2.explore();
         blueMotorcycle.explore();
         test.explore();
     }
