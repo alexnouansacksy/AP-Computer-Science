@@ -16,5 +16,10 @@ public class GenericsAndTernary {
         out.println(msg);
         box.setVal(10);
         out.println(box.getVal());
+        // box.setVal("Hello");
+        var sBox = new MyBox<String>("hello");
+        out.println(sBox);
+        // ONLY EVER USE "var" IF YOU USE THE "new" KEYBOARD
+        // AND THE TYPE I SNOT A CHILD CLASS
     }
 }
