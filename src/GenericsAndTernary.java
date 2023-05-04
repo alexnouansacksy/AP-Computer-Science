@@ -21,5 +21,14 @@ public class GenericsAndTernary {
         out.println(sBox);
         // ONLY EVER USE "var" IF YOU USE THE "new" KEYBOARD
         // AND THE TYPE I SNOT A CHILD CLASS
+        int day = 3;
+        switch (day) {
+            case 1 -> out.println("Monday");
+            case 2 -> out.println("Tuesday");
+            case 3 -> out.println("Wednesday");
+            case 4 -> out.println("Thursday");
+            case 5 -> out.println("Friday");
+            default -> out.println("Invalid");
+        }
     }
 }
