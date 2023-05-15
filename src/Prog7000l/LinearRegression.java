@@ -3,15 +3,16 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class LinearRegression {
-    private double theta0; // y-Intercept
-    private double theta1; // slope
-    private double alpha; // Learning Rate
+    private double theta0;  // y-Intercept
+    private double theta1;  // Slope
+    private double alpha;   // Learning Rate
     private double tolerance;
     private double[] objective;
 
-    public LinearRegression(double thetaOne, double thetaZero, double learning_rate, double tol) {
-        theta0 = thetaZero;
+    public LinearRegression(double thetaOne, double thetaZero,
+                            double learning_rate, double tol) {
         theta1 = thetaOne;
+        theta0 = thetaZero;
         alpha = learning_rate;
         tolerance = tol;
     }
@@ -28,30 +29,34 @@ public class LinearRegression {
                 for (int i = 0; i < m; i++) {
                     double temp = (theta1 * X_train[i][0] + theta0 - y_train[i]);
                     // predicted label - actual label
-                    temp0 = temp;
+                    temp0 += temp;
                     temp1 += temp * X_train[i][0];
                 }
-                // gradient descent
+                // Gradient Descent
                 theta0 -= (1.0/m) * alpha * temp0;
                 theta1 -= (1.0/m) * alpha * temp1;
             }
-            for (int i = 0; i < m; i ++)
-                e[i] = theta1 * X_train[i][0] + theta0 - y_train[1]; // J
+            for (int i = 0; i < m; i++)
+                e[i] = theta1 * X_train[i][0] + theta0 - y_train[i];  // J
             double obj = 0;
             for (int i = 0; i < m; i++)
                 obj += e[i] * e[i];
             objective[epoch] = obj;
 
-            if ((epoch > 1) && (Math.abs(objective[epoch] - objective[epoch - 1]) < tolerance))
+            if ((epoch > 1) && (Math.abs(objective[epoch]-objective[epoch-1])
+                    < tolerance))
                 break;
         }
     }
 
-    public double getIntercept() {return theta0;}
-    public double getSlope() {return theta1;}
-    public double predict(double x) {return theta1 * x + theta0;}
+    public String toString() {
+        return "Regression Line: y = " + theta1 + " * x + " + theta0 +
+                "\nObjective: " + Arrays.toString(objective) +
+                "\nMin. Objective: " + (double)Arrays.stream(objective).min().getAsDouble();
 
-    public String toString() {return "Regression Line: y = " + theta1 + " * x + " + theta0 + "\nObjective: " +
-            Arrays.toString(objective) + "\nMin. Objective: " + (double)Arrays.stream(objective).min().getAsDouble();
     }
+
+    public double getIntercept() { return theta0; }
+    public double getSlope() { return theta1; }
+    public double predict(double x) { return theta1 * x + theta0; }
 }
