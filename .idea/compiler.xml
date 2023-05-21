@@ -9,4 +9,9 @@
       <directory url="file://$PROJECT_DIR$/src/ElevensLab/Elevens/ActivityStarterCode/Activity8StarterCode" includeSubdirectories="true" />
     </excludeFromCompile>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AP Computer Science" options="--add-exports java.base/java=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>
