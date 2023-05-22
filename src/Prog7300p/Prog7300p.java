@@ -37,3 +37,28 @@ public class Prog7300p {
         y_train = new double[]{1, 0};
     }
 }
+/*
+AND Neuron:
+Epoch 1: Loss: 0.75
+Epoch 2: Loss: 1.0
+Epoch 3: Loss: 0.75
+Epoch 4: Loss: 0.75
+Epoch 5: Loss: 0.75
+Epoch 6: Loss: 0.75
+Epoch 7: Loss: 0.75
+Epoch 8: Loss: 0.75
+Epoch 9: Loss: 0.25
+Epoch 10: Loss: 0.0
+Epoch 11: Loss: 0.0
+Epoch 12: Loss: 0.0
+Epoch 13: Loss: 0.0
+Epoch 14: Loss: 0.0
+Epoch 15: Loss: 0.0
+Prediction: [0.0, 0.0, 0.0, 1.0]
+Actual: [0.0, 0.0, 0.0, 1.0]
+Weights: [0.17919056624765753, 0.11824567748414566]
+Bias: -0.19999999999999987
+
+Process finished with exit code 0
+
+ */
