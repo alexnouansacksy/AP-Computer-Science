@@ -2,7 +2,9 @@ package Prog7301m;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.*;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
 
 import static java.lang.System.out;
 
@@ -16,8 +18,88 @@ public class Prog7301m {
 
     public static void main(String[] args) {
         try {
+            // Training data
             Scanner keyboard = new Scanner(new File("data/prog7301m_train.csv"));
+            var Xtr = new ArrayList<Double[]>();
+            var ytr = new ArrayList<Double[]>();
+            keyboard.nextLine();
+            while(keyboard.hasNextLine()) {
+                String[] line = keyboard.nextLine().split(",");
+                Double[] row = new Double[line.length-1];
+                Double[] label_onehot = new Double[10];
+                int label = Integer.parseInt(line[0]);
+                for(int i = 0; i < label_onehot.length; i++)
+                    label_onehot[i] = 0.0;
+                label_onehot[label] = 1.0;
+                for (int i = 1; i < line.length; i++)
+                    row[i-1] = Double.parseDouble(line[i]);
+                Xtr.add(row);
+                ytr.add(label_onehot);
+            }
 
+            // Test data
+            keyboard = new Scanner(new File("data/prog7301m_test.csv"));
+            var Xte = new ArrayList<Double[]>();
+            var yte = new ArrayList<Double[]>();
+            keyboard.nextLine();
+            while(keyboard.hasNextLine()) {
+                String[] line = keyboard.nextLine().split(",");
+                Double[] row = new Double[line.length-1];
+                Double[] label_onehot = new Double[10];
+                int label = Integer.parseInt(line[0]);
+                for(int i = 0; i < label_onehot.length; i++)
+                    label_onehot[i] = 0.0;
+                label_onehot[label] = 1.0;
+                for (int i = 1; i < line.length; i++)
+                    row[i-1] = Double.parseDouble(line[i]);
+                Xte.add(row);
+                yte.add(label_onehot);
+            }
+
+            double[][] X_train = new double[Xtr.size()][784];
+            double[][] y_train = new double[ytr.size()][10];
+            for (int i = 0; i < Xtr.size(); i++) {
+                for (int j = 0; j < 784; j++)
+                    X_train[i][j] = Xtr.get(i)[j];
+                for (int j = 0; j < 10; j++)
+                    y_train[i][j] = ytr.get(i)[j];
+            }
+
+            double[][] X_test = new double[Xte.size()][784];
+            double[][] y_test = new double[yte.size()][10];
+            for (int i = 0; i < Xte.size(); i++) {
+                for (int j = 0; j < 784; j++)
+                    X_train[i][j] = Xte.get(i)[j];
+                for (int j = 0; j < 10; j++)
+                    y_train[i][j] = yte.get(i)[j];
+            }
+
+            // Create model
+            var model = new MultiLayerPerceptron(new int[] {784, 100, 10}, 0.1, new Activations.Sigmoid());
+            model.train(X_train, y_train, 10);
+            out.println("Final Accuracy: " + model.accuracy(X_test, y_test));
+
+            // Pick a random image from the test set
+            int index = (int) (Math.random() * X_test.length);
+            double[] X_val = X_test[index];
+            double[] y_val = y_test[index];
+
+            // Predict the label
+            double[] y_pred = model.predict(X_val);
+            int pred = argmax(y_pred);
+            int actual = argmax(y_val);
+            out.println("Predicted: " + pred + "\tActual: " + actual);
+
+            // Display the image
+            var image = new BufferedImage(28, 28, BufferedImage.TYPE_INT_RGB);
+            for (int i = 0; i < 28; i++)
+                for (int j = 0; j < 28; j++)
+                    image.setRGB(j, i, (int)X_val[i * 28 + j]);
+            var frame = new JFrame("Image");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.add(new JLabel(new ImageIcon(image)));
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
         } catch (IOException e) {
             out.println("Can't find data file!");
         }
