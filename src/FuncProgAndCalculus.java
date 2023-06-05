@@ -1,5 +1,5 @@
 import java.util.function.Function;
-
+import static java.lang.System.out;
 
 public class FuncProgAndCalculus {
     public static double f(double x) {return Math.pow(x, 3);} // f(x) = x^3
@@ -31,20 +31,20 @@ public class FuncProgAndCalculus {
 
     public static void main(String[] args) {
         double x = 5;
-        System.out.println("x = " + x);
-        System.out.println("f(x) = " + f(x));
-        System.out.println("f'(x) using power rule = " + (3 * Math.pow(x, 2)));
-        System.out.println("f'(x) using def = " + derive(FuncProgAndCalculus::f, x));
-        System.out.println("f''(x) = " + deriveN(FuncProgAndCalculus:: f, x, 2));
-        System.out.println("f'''(x) = " + deriveN(FuncProgAndCalculus:: f, x, 3));
+        out.println("x = " + x);
+        out.println("f(x) = " + f(x));
+        out.println("f'(x) using power rule = " + (3 * Math.pow(x, 2)));
+        out.println("f'(x) using def = " + derive(FuncProgAndCalculus::f, x));
+        out.println("f''(x) = " + deriveN(FuncProgAndCalculus:: f, x, 2));
+        out.println("f'''(x) = " + deriveN(FuncProgAndCalculus:: f, x, 3));
         // =======
         double a = 1;
         double b = 5;
         int n = 100_000_000;
-        System.out.printf("a = %f\tb + %f\n", a, b);
-        System.out.println("f(x) = " + f(b-a));
+        out.printf("a = %f\tb + %f\n", a, b);
+        out.println("f(x) = " + f(b-a));
         // Fundamental Theorem of Calculus vs Riemann Sum
-        System.out.println("F(X) using power rule = " + ((Math.pow(b, 4)/4)-(Math.pow(a, 4) / 4)));
-        System.out.println("F(X) using def = " + integrate(FuncProgAndCalculus::f,a,b,n));
+        out.println("F(X) using power rule = " + ((Math.pow(b, 4)/4)-(Math.pow(a, 4) / 4)));
+        out.println("F(X) using def = " + integrate(FuncProgAndCalculus::f,a,b,n));
     }
 }
